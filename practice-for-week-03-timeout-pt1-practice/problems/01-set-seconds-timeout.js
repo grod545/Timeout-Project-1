@@ -24,9 +24,18 @@ setSecondsTimeout(function () {
 ***********************************************************************/
 
 function setSecondsTimeout(cb, delayInSeconds) {
+<<<<<<< HEAD
   
+=======
+  setTimeout(cb, delayInSeconds * 1000)
+>>>>>>> 62e82310c56525247f41abbd6502f24ae47a2f9c
 }
 
+setSecondsTimeout(function () {
+  console.log('hello');
+}, 1);
+
+// should print 'hello' after 1000 milliseconds
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 try {
   module.exports = setSecondsTimeout;
