@@ -3,6 +3,6 @@ Time to practice dealing with asynchronous functions like setTimeout and setInte
 
 To get started, use the following commands:
 
-cd into the project directory
-npm install to install any dependencies
-mocha to run the test cases
+-cd into the project directory
+-npm install to install any dependencies
+-mocha to run the test cases
