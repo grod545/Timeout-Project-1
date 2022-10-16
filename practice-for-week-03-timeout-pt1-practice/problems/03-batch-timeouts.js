@@ -31,15 +31,15 @@ const timeoutObjs = batchTimeouts(tasks, delays);
 
 console.log(timeoutObjs); // [ Timeout {...},  Timeout {...}, Timeout {...} ]
 ***********************************************************************/
-
-function batchTimeouts(callbacks, delays) {
-  const result = [];
-  callbacks.forEach((callback, i) => {
+function batchTimeouts(callbacks, delays){
+  let objArr = [];
+  for (let i = 0; i < callbacks.length; i++){
     let delay = delays[i]
-    let timeOut = setTimeout(callback, delay)
-    result.push(timeOut);
-  })
-  return result;
+    let cb = callbacks[i]
+    let obj = setTimeout(cb, delay)
+    objArr.push(obj)
+  }
+  return objArr;
 }
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 try {
